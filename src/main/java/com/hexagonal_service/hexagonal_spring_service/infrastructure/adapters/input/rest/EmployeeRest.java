@@ -61,7 +61,7 @@ public class EmployeeRest {
     @GetMapping("/delete/{id}")
     public ResponseEntity<Void> deleteEmployeeById(@PathVariable Long id) {
         manageEmployeeUseCase.deleteEmployee(id);
-        return ResponseEntity.ok().build();
+         return ResponseEntity.ok().build();
     }
 
     @PostMapping("/update")
