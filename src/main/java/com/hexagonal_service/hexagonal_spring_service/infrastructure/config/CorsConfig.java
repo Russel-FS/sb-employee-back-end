@@ -1,4 +1,4 @@
-package com.hexagonal_service.hexagonal_spring_service;
+package com.hexagonal_service.hexagonal_spring_service.infrastructure.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
