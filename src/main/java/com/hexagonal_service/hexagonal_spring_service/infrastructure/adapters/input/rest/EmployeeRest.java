@@ -5,6 +5,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -58,7 +59,7 @@ public class EmployeeRest {
         }
     }
 
-    @GetMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteEmployeeById(@PathVariable Long id) {
         manageEmployeeUseCase.deleteEmployee(id);
          return ResponseEntity.ok().build();
@@ -73,5 +74,6 @@ public class EmployeeRest {
         Employee response = manageEmployeeUseCase.updateEmployee(employee);
         return ResponseEntity.ok(employeeMapper.toDto(response));
     }
+ 
 
 }
